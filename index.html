@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Spesial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mengecek apakah browser mendukung notifikasi
+            if (Notification.permission !== 'granted') {
+                Notification.requestPermission();
+            } else {
+                showNotification();
+            }
+        });
+
+        function showNotification() {
+            if (Notification.permission === 'granted') {
+                new Notification('Hai, kamu!', {
+                    body: 'Aku punya sesuatu untukmu. Klik di sini!',
+                    icon: 'https://example.com/icon.png' // Ganti dengan URL gambar jika diinginkan
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Halooo syaa!</h1>
+    <p>aku pengen nanyain kabar kamu nih, gimana kabarnya?.</p>
+    <p>i here for u still</p>
+</body>
+</html>
