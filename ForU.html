@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Report for You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            z-index: 1000;
+            text-align: left;
+        }
+        .popup h2 {
+            color: #ff69b4;
+            margin-top: 0;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hai, Syaa!</h1>
+    <p>Aku punya sesuatu buat kamu. Klik tombol di bawah untuk melihatnya!</p>
+    <button onclick="showPopup()">Lihat Laporan</button>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <h2>Laporan Spesial</h2>
+        <p><strong>Nama:</strong> Syafira</p>
+        <p><strong>Aku mau bilang:</strong></p>
+        <ul>
+            <li>Kamu gimana kabarnya syaa? </li>
+            <li>Senang bisa kenal sama kamu</li>
+            <li>Aku ada disini buat kamu</li>
+        </ul>
+        <p><strong>Kesimpulan:</strong> kalo kamu nyari aku, aku ada disini ko wkwk</p>
+        <button onclick="closePopup()">Tutup</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
